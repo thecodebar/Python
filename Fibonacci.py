@@ -77,3 +77,26 @@ def Lagged_finonacci_generator(n):
     for i in range (55, n):
         L[i] = (L[i - 24] + L[i - 55])%1000000 
     return L
+
+def is_perfect_sq(N):
+    """
+    Returns True if N is the perfect square. 
+
+    Used in is_fibonacci function.
+    """
+    n = int(m.sqrt(N))
+    if N == n**2:
+        return True
+    else:
+        return False
+
+def is_fibonacci(N):
+    """
+    This function returns whether the given number is Fibonacci or not.
+
+    I. Gessel gave a simple test in 1972, N is a Fibonacci number if and only if 5**N*2 + 4 or 5*N**2 - 4 is a square number.
+    """
+    if is_perfect_sq(5 * N**2 + 4) or is_perfect_sq(5 * N**2 - 4):
+        return True 
+    else:
+        return False
