@@ -56,7 +56,7 @@ def fibonacci_below(z):
     n = int(m.floor(m.log(z*m.sqrt(5) + .5)/m.log(golden_ratio)))
     return fibonacci_list(n)
 
-def Lagged_finonacci_generator(n):
+def Lagged_fibonacci_generator(n):
     """
     Lagged Fibonacci generators are defined as - 
     
